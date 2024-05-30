@@ -13,8 +13,8 @@ namespace TechJobs.Tests
         [TestMethod]
         public void TestSettingJobId()
         {
-            Assert.AreEqual(1, job1.Id);
-            Assert.AreEqual(2, job2.Id);
+            Assert.AreEqual(9, job1.Id);
+            Assert.AreEqual(10, job2.Id);
             Assert.AreEqual(job1.Id + 1, job2.Id);
         }
         [TestMethod]
@@ -46,7 +46,7 @@ namespace TechJobs.Tests
                 job3.ToString()
             ,
                 Environment.NewLine +
-                $"ID: 3" + Environment.NewLine +
+                $"ID: 15" + Environment.NewLine +
                 $"Name: Product tester" + Environment.NewLine +
                 $"Employer: ACME" + Environment.NewLine +
                 $"Location: Desert" + Environment.NewLine +
