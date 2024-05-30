@@ -1,6 +1,4 @@
-﻿//add using statement here
-
-namespace TechJobsOO.Tests
+﻿namespace TechJobsOO.Tests
 {
 	[TestClass]
     public class TestTask5
@@ -8,8 +6,6 @@ namespace TechJobsOO.Tests
         //Task 5 Tests used to verify that students are testing their custom ToString method.
         //Uses jobs from the Job class.
         //Tests are numbered.
-
-        /*TODO: Task 5: Remove this line to uncomment the tests
 
         //Unit Test 1:  TestToStringStartsAndEndsWithNewLine  -----------------------
 
@@ -146,8 +142,6 @@ namespace TechJobsOO.Tests
             //verify
             Assert.AreEqual(text, output, "Empty string handling error");
         }
-        TODO: Task 5: Remove this line to uncomment the tests*/
-
     }
 
 }

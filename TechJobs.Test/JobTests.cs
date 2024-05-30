@@ -31,6 +31,43 @@ namespace TechJobs.Tests
         {
             Assert.IsFalse(job3.Id.Equals(job4.Id));
         }
+        [TestMethod]
+        public void TestToStringStartsAndEndsWithNewLine()
+        {
+            Assert.IsTrue(job3.ToString().StartsWith(Environment.NewLine));
+            Assert.IsTrue(job3.ToString().EndsWith(Environment.NewLine));
+        }
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            Console.WriteLine(job3.ToString());
+            Console.WriteLine(job3.ToString());
+            Assert.AreEqual(
+                job3.ToString()
+            ,
+                Environment.NewLine +
+                $"ID: 3" + Environment.NewLine +
+                $"Name: Product tester" + Environment.NewLine +
+                $"Employer: ACME" + Environment.NewLine +
+                $"Location: Desert" + Environment.NewLine +
+                $"Position Type: Quality control" + Environment.NewLine +
+                $"Core Competency: Persistence" + Environment.NewLine
+            );
+        }
+        [TestMethod]
+        public void TestToStringHandlesEmptyField()
+        {
+            Assert.AreEqual(
+                Environment.NewLine +
+                $"ID: {job1.Id}" + Environment.NewLine +
+                $"Name: Data not available" + Environment.NewLine +
+                $"Employer: Data not available" + Environment.NewLine +
+                $"Location: Data not available" + Environment.NewLine +
+                $"Position Type: Data not available" + Environment.NewLine +
+                $"Core Competency: Data not available" + Environment.NewLine,
+                job1.ToString()
+            );
+        }
     }
 }
 
